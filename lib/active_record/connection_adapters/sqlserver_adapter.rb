@@ -46,7 +46,7 @@ module ActiveRecord
                      :lowercase_schema_reflection, :auto_connect_duration, :showplan_option, :use_output_inserted
 
       self.enable_default_unicode_types = true
-      self.:use_output_inserted = true
+      self.use_output_inserted = true
 
       class BindSubstitution < Arel::Visitors::SQLServer # :nodoc:
         include Arel::Visitors::BindVisitor
