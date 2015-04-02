@@ -43,9 +43,10 @@ module ActiveRecord
 
       cattr_accessor :native_text_database_type, :native_binary_database_type, :native_string_database_type,
                      :enable_default_unicode_types, :auto_connect, :cs_equality_operator,
-                     :lowercase_schema_reflection, :auto_connect_duration, :showplan_option
+                     :lowercase_schema_reflection, :auto_connect_duration, :showplan_option, :use_output_inserted
 
       self.enable_default_unicode_types = true
+      self.:use_output_inserted = true
 
       class BindSubstitution < Arel::Visitors::SQLServer # :nodoc:
         include Arel::Visitors::BindVisitor
