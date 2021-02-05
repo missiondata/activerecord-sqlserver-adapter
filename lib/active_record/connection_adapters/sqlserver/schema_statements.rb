@@ -86,7 +86,7 @@ module ActiveRecord
         def new_column(name, default, sql_type_metadata, null, default_function = nil, collation = nil, comment = nil, sqlserver_options = {})
           SQLServerColumn.new(
             name,
-            default.nil? ? nil : default.to_s
+            default.nil? ? nil : default.to_s,
             sql_type_metadata,
             null,
             default_function,
